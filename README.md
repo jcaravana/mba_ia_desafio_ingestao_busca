@@ -1,13 +1,13 @@
 # Ingestão e Busca Semântica com LangChain e Postgres
 
-Desafio técnico do MBA em Engenharia de Software com IA. O projeto entrega um software capaz de:
+Desafio técnico do MBA em Engenharia de Software com IA da FullCycle. O projeto entrega um software capaz de:
 
 - **Ingestão**: ler um arquivo PDF e salvar suas informações em um banco de dados PostgreSQL com a extensão `pgvector`.
 - **Busca**: permitir que o usuário faça perguntas via linha de comando (CLI) e receba respostas baseadas apenas no conteúdo do PDF.
 
 ## Como funciona
 
-1. `src/ingestion.py` lê o PDF `SuperTechIABrazil_Relatorio_2025.pdf`, divide o texto em chunks, gera o embedding de cada chunk e grava tudo no banco vetorial PGVector.
+1. `src/ingestion.py` lê o PDF `document.pdf`, divide o texto em chunks, gera o embedding de cada chunk e grava tudo no banco vetorial PGVector.
 2. `src/search.py` recebe uma pergunta, vetoriza essa pergunta, busca no PGVector os chunks mais similares e usa um LLM para responder **somente** com base nesse contexto recuperado (RAG). Se a informação não estiver no PDF, o modelo responde que não tem informações suficientes.
 3. `src/chat.py` é a interface de linha de comando: fica em loop pedindo perguntas ao usuário e exibindo as respostas geradas por `search.py`.
 
