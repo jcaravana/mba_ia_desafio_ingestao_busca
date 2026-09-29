@@ -18,7 +18,7 @@ Desafio técnico do MBA em Engenharia de Software com IA da FullCycle. O projeto
 ├── docker-compose.yml                     # Postgres + extensão pgvector
 ├── requirements.txt                       # Dependências Python
 ├── .env.example                           # Modelo de variáveis de ambiente
-├── SuperTechIABrazil_Relatorio_2025.pdf   # PDF usado na ingestão
+├── document.pdf   # PDF usado na ingestão
 └── src/
     ├── ingestion.py                       # Lê o PDF e grava os embeddings no PGVector
     ├── search.py                          # Busca por similaridade + resposta do LLM
