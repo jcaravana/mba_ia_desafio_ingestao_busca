@@ -24,7 +24,7 @@ load_dotenv()
 # Localiza o PDF na raiz do projeto (um nível acima da pasta src)
 print("[2/8] Localizando o PDF...")
 current_dir = Path(__file__).parent
-pdf_path = current_dir.parent / "SuperTechIABrazil_Relatorio_2025.pdf"
+pdf_path = current_dir.parent / "document.pdf"
 
 # Lê o PDF e extrai o texto de cada página como um Document do LangChain
 print(f"[3/8] Lendo o PDF ({pdf_path.name})...")
